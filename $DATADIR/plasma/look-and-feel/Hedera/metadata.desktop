@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Hedera
+Type=Service
+
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=SSF
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-License=CC-BY-SA_V4
+X-KDE-PluginInfo-Name=Hedera
+X-KDE-PluginInfo-Version=2.0
+X-KDE-PluginInfo-Website=https://github.com/sixsixfive/Hedera
+X-Plasma-MainScript=defaults
