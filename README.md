@@ -1,5 +1,12 @@
-# Hedera
-aims to be a universal theme based on breeze.
+| ![alt text](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.Screenshot.png "Preview") |
+
+A theme based on Breeze with some eye-friendly colors.
+
+##### Themes available:
+
+* GTK3.20
+* Konsole ColorScheme
+* KDE ColorScheme
 
 ### Dependencies
 
@@ -15,3 +22,4 @@ just clone or download(right side green button) the theme and move the wanted fi
 ### Packages
 
 * [Chakra](https://chakraos.org/ccr/packages.php?ID=7737)
+* [Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera_current.deb)
