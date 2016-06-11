@@ -8,7 +8,7 @@ Standards-Version: 3.9.6
 Package: hedera
 Architecture: all
 Pre-Depends: curl, tar, xz-utils
-Depends: gtk3-nocsd, gtk3 (>=3.20)
+Depends: gtk3-nocsd, libgtk-3-0 (>=3.20)
 Suggests: ivy-icon-theme
 Replaces: herdera
 Breaks: hedera

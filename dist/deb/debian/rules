@@ -19,7 +19,9 @@ install: build
 	dh_testroot
 	dh_prep
 	dh_installdirs
-	cp -R "../../../\$DATADIR/"* "$debfolder/$pkgname"
+	mkdir -p debian/hedera/usr/share
+	cp -R ../../\$$DATADIR/* "debian/hedera/usr/share"
+	ln -sv gtk-3.20 debian/hedera/usr/share/themes/Hedera/gtk-3.0
 
 binary-indep: build install
 	dh_testdir

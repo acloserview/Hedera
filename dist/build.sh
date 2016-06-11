@@ -26,11 +26,8 @@ build() {
 	for _dir in $(echo $(find ${basedir} -mindepth 1 -maxdepth 1 -type d -name "deb")); do
 		cd "$_dir"
 		echo "$PWD"
-		cat <<EOF > debian/changelog
-$hedera ($_release-1) unstable; urgency=low
-   new upsteam release
- -- $USER <$USER@$(cat /etc/hostname)>  $date
-EOF
+		cp debian/changelog.tmp debian/changelog
+		sed -i "s/__RELEASE__/$_release/" debian/changelog
 		chmod +x debian/rules
 		fakeroot debian/rules binary
 		cd ..
@@ -42,6 +39,8 @@ cd "${basedir}"
 build
 ##only tested on suse
 fakeroot alien -r -c -k -v --description="A universal widget theme" hedera_${_release}-1_all.deb
+mv -f hedera_${_release}-1_all.deb hedera_current.deb
+mv -f hedera-${_release}-1.noarch.rpm hedera_current.rpm
 clean
 printf "\n\n\ndone\n\n\n"
 sleep 5
