@@ -1,4 +1,4 @@
-| ![alt text](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.Screenshot.png "Preview") |
+ ![alt text](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.Screenshot.png "Preview") 
 
 A theme based on Breeze with some eye-friendly colors.
 
