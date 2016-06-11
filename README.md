@@ -3,7 +3,8 @@ aims to be a universal theme based on breeze.
 
 ### Dependencies
 
-* GTK+=3.20.X
+* Plasma=5
+* GTK3=3.20
 * [GTK-nocsd](https://github.com/PCMan/gtk3-nocsd)
 * [Ivy icon theme(optional)](https://github.com/sixsixfive/Ivy)
 
