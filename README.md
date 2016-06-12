@@ -11,8 +11,7 @@ A theme based on Breeze with some eye-friendly colors.
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
 
-
-##### Optional
+###### Optional
 * [Ivy Icons](https://github.com/sixsixfive/Ivy) (strongly recommend for the GTK3 theme!)
 
 ### How to Install?
