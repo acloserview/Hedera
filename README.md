@@ -4,9 +4,12 @@ A theme based on Breeze with some eye-friendly colors.
 
 ##### Themes available:
 
-* GTK3.20 (made for use with [GTK-nocsd](https://github.com/PCMan/gtk3-nocsd) )
+* GTK3.20 (made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd) )
 * Konsole ColorScheme
 * KDE ColorScheme
+
+##### Optional
+* [Ivy Icons(strongly recommend for the GTK3 theme!)]((https://github.com/sixsixfive/Ivy)
 
 ### How to Install?
 
