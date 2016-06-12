@@ -4,9 +4,13 @@ A theme based on Breeze with some eye-friendly colors.
 
 ##### Themes available:
 
-* GTK3.20 (made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd) )
 * Konsole ColorScheme
 * KDE ColorScheme
+* KSplash theme
+* GTK3.20 
+	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
+	* needs disabled overly schrollbars (export GTK_OVERLAY_SCROLLING=0)
+
 
 ##### Optional
 * [Ivy Icons](https://github.com/sixsixfive/Ivy) (strongly recommend for the GTK3 theme!)
