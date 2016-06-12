@@ -9,7 +9,7 @@ A theme based on Breeze with some eye-friendly colors.
 * KDE ColorScheme
 
 ##### Optional
-* [Ivy Icons(strongly recommend for the GTK3 theme!)]((https://github.com/sixsixfive/Ivy)
+* [Ivy Icons](https://github.com/sixsixfive/Ivy) (strongly recommend for the GTK3 theme!)
 
 ### How to Install?
 
