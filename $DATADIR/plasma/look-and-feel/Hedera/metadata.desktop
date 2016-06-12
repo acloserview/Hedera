@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Name=Hedera
 Type=Service
-
+Icon=kde
 X-KDE-ServiceTypes=Plasma/LookAndFeel
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=SSF
