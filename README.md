@@ -8,6 +8,7 @@
 * GTK3.20 
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
+	* keep in mind that the theme won't work in GNOME
 * [Ivy Icons](https://github.com/sixsixfive/Ivy) (optional)
 
 ### How to Install?
@@ -17,3 +18,4 @@ just clone or download(right side green button) the theme and move the wanted fi
 ### Packages(use at your own risk)
 
 * [Chakra](https://chakraos.org/ccr/packages.php?ID=7737)
+* [Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
