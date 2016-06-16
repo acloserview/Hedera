@@ -15,7 +15,7 @@
 
 just clone or download(right side green button) the theme and move the wanted files inside the CP_TO_DATADIRS folder to your DATADIR(usually /usr/share or /usr/local/share) or XDG_DATADIR (usually (~/.local/share).
 
-### Packages(use at your own risk)
+##### Packages(use at your own risk)
 
-* [Chakra](https://chakraos.org/ccr/packages.php?ID=7737)
-* [Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+* [@ChakraCCR](https://chakraos.org/ccr/packages.php?ID=7737)
+* [@Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
