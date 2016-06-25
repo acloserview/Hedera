@@ -5,6 +5,7 @@
 * Konsole ColorScheme
 * KDE ColorScheme
 * KSplash theme
+* SLiM theme
 * GTK3.20 
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
@@ -16,6 +17,8 @@
 just clone or download(right side green button) the theme and move the wanted files inside the CP_TO_DATADIRS folder to your DATADIR(usually /usr/share or /usr/local/share) or XDG_DATADIR (usually (~/.local/share).
 
 Note: there is no easier way todo this since every KDE application uses different theme paths!
+
+''Some themes like SLIM need to be placed into the sysprefix''
 
 #### Suggested Breeze KStyle settings
 
