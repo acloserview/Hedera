@@ -18,10 +18,6 @@ fi
 printf '\n==> Downloading the latest release from GitHub!\n'
 curl -L https://github.com/sixsixfive/Hedera/archive/master.zip > "${_tmpdir}"/Hedera-master.zip --progress-bar
 printf '\n==> Extracting...\n'
-if [ -d /usr/share/themes/Hedera ]; then
-    printf "the Hedera folder already exits - aborting!\n"
-    exit 1
-fi
 cd "${_tmpdir}"
 if ($type 7z >/dev/null 2>&1); then
 	7z x "${_tmpdir}"/Hedera-master.zip -o"${_tmpdir}"
