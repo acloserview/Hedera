@@ -45,4 +45,4 @@ Note: there is no easier way todo this since every KDE application uses differen
 ##### Packages(use at your own risk)
 
 * [@ChakraCCR](https://chakraos.org/ccr/packages.php?ID=7737)
-* [@Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+* [@Devuan/Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)

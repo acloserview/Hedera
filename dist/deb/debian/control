@@ -10,6 +10,7 @@ Architecture: all
 Pre-Depends: curl, unzip, findutils, coreutils, sed
 Depends: gtk3-nocsd, libgtk-3-0 (>=3.20), libgtk-3-0 (<<3.21)
 Replaces: hedera-theme
+Suggests: fonts-noto
 Enhances: slim, libgtk-3-0, gtk3-nocsd, qterminal, konsole
-Breaks: hedera-theme, cinnamon-session-common, gnome-session-bin
+Breaks: cinnamon-session-common, gnome-session-bin
 Description: An easier way to install Hedera systemwide
