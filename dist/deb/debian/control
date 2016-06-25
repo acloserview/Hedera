@@ -10,5 +10,6 @@ Architecture: all
 Pre-Depends: curl, unzip, findutils, coreutils, sed
 Depends: gtk3-nocsd, libgtk-3-0 (>=3.20), libgtk-3-0 (<<3.21)
 Replaces: hedera-theme
+Enhances: slim, libgtk-3-0, gtk3-nocsd, qterminal, konsole
 Breaks: hedera-theme
 Description: An easier way to install Hedera systemwide

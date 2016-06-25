@@ -2,7 +2,7 @@
 
 ##### Themes available:
 
-* Konsole ColorScheme
+* Konsole/Qterm ColorScheme
 * KDE ColorScheme
 * KSplash theme
 * SLiM theme
@@ -14,7 +14,7 @@
 
 ### How to Install?
 
-just clone or download(right side green button) the theme and move the wanted files inside the CP_TO_DATADIRS folder to your DATADIR(usually /usr/share or /usr/local/share) or XDG_DATADIR (usually (~/.local/share).
+Just clone or download(right side green button) the theme and move the wanted files inside the CP_TO_DATADIRS folder to your DATADIR(usually /usr/share or /usr/local/share) or XDG_DATADIR (usually (~/.local/share).
 
 Note: there is no easier way todo this since every KDE application uses different theme paths!
 
