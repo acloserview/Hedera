@@ -25,7 +25,9 @@ _Some themes like SLIM need to be placed into the sysprefix_
 * [@ChakraCCR](https://chakraos.org/ccr/packages.php?ID=7737)
 * [@DevuanDEB](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
 
-### Suggested Breeze KStyle settings (kcmshell5 breezestyleconfig)
+### Suggested Settings
+
+#### Breeze KStyle settings (kcmshell5 breezestyleconfig)
 
 ##### General:
 
@@ -37,7 +39,7 @@ _Some themes like SLIM need to be placed into the sysprefix_
 * Draw frame around page titles: OFF
 * Draw frame around side panels: ON
 
-#### Suggested KColor Settings (kcmshell5 colors)
+#### KColor Settings (kcmshell5 colors)
 
 ##### Options:
 
