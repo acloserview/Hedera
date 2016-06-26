@@ -20,7 +20,12 @@ Note: there is no easier way todo this since every KDE application uses differen
 
 ''Some themes like SLIM need to be placed into the sysprefix''
 
-#### Suggested Breeze KStyle settings
+##### Packages(use at your own risk)
+
+* [@ChakraCCR](https://chakraos.org/ccr/packages.php?ID=7737)
+* [@DevuanDEB](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+
+### Suggested Breeze KStyle settings
 
 ##### General:
 
@@ -41,8 +46,3 @@ Note: there is no easier way todo this since every KDE application uses differen
 * Shade sorted column in lists: OFF
 * Apply colors to non-Qt applications: OFF
 * Contrast: Maximum
-
-##### Packages(use at your own risk)
-
-* [@ChakraCCR](https://chakraos.org/ccr/packages.php?ID=7737)
-* [@Devuan/Debian](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
