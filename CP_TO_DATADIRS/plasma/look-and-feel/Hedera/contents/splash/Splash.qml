@@ -89,7 +89,7 @@ Image {
 		opacity: 1
 		Behavior on opacity {
 			NumberAnimation {
-				duration: 1000; 
+				duration: 1500; 
 				easing {
 					type: Easing.Linear
 				} 
@@ -107,7 +107,7 @@ Image {
 		opacity: 0
 		Behavior on opacity {
 			NumberAnimation {
-				duration: 1000; 
+				duration: 1500; 
 				easing {
 					type: Easing.Linear
 				} 
@@ -125,7 +125,7 @@ Image {
 		opacity: 0
         Behavior on opacity {
 			NumberAnimation {
-				duration: 1000; 
+				duration: 1500; 
 				easing {
 					type: Easing.Linear
 				} 
@@ -143,7 +143,7 @@ Image {
 		opacity: 0
         Behavior on opacity {
 			NumberAnimation {
-				duration: 1000; 
+				duration: 1500; 
 				easing {
 					type: Easing.Linear
 				} 
@@ -161,7 +161,7 @@ Image {
 		opacity: 0
         Behavior on opacity {
 			NumberAnimation {
-				duration: 1000; 
+				duration: 1500; 
 				easing {
 					type: Easing.Linear
 				} 
@@ -179,7 +179,7 @@ Image {
 		opacity: 0
         Behavior on opacity {
 			NumberAnimation {
-				duration: 1000; 
+				duration: 1500; 
 				easing {
 					type: Easing.Linear
 				} 
