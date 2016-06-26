@@ -4,7 +4,7 @@
 
 * Konsole/Qterm ColorScheme
 * KDE ColorScheme
-* KSplash theme
+* Plasma Look 'n' Feel
 * SLiM theme
 * GTK3.20 
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
