@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.shot.png "Preview") 
+![https://raw.githubusercontent.com/sixsixfive/Hedera/master/.sshot.png](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.shot.png "Preview") 
 
 ##### Themes available:
 
