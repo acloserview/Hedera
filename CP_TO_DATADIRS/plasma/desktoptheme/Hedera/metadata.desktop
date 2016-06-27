@@ -1,0 +1,25 @@
+[Desktop Entry]
+Name=Hedera
+
+X-KDE-PluginInfo-Author=SSF
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-Name=default
+X-KDE-PluginInfo-Version=5.20
+X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=CC-BY-SA_v4
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=5.0
+
+[Wallpaper]
+defaultWallpaperTheme=Hedera
+defaultFileSuffix=.png
+defaultWidth=1920
+defaultHeight=1080
+
+[ContrastEffect]
+enabled=true
+contrast=2.0
+intensity=0.0
+saturation=1.7
