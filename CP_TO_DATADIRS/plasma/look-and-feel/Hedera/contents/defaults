@@ -11,7 +11,7 @@ Theme=Ivy
 widgetStyle=breeze
 
 [plasmarc][Theme]
-name=default
+name=Hedera
 
 [ksplashrc][KSplash]
 Engine=KSplashQML
