@@ -2,9 +2,10 @@
 
 ##### Themes available:
 
+* Plasma Look'n'Feel
 * Konsole/Yakuake/Qterm ColorScheme
 * KDE ColorScheme
-* Plasma Look'n'Feel
+* Aurorae theme
 * [SLiM](https://github.com/iwamatsu/slim) theme
 * GTK 3.20 theme
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
