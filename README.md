@@ -28,7 +28,7 @@ _Some themes like SLIM need to be placed into the sysprefix_
 
 ### Suggested Settings
 
-#### Breeze KStyle settings (kcmshell5 breezestyleconfig)
+#### Breeze KStyle settings (LANG=en kcmshell5 breezestyleconfig)
 
 ##### General:
 
@@ -40,7 +40,7 @@ _Some themes like SLIM need to be placed into the sysprefix_
 * Draw frame around page titles: OFF
 * Draw frame around side panels: ON
 
-#### KColor Settings (kcmshell5 colors)
+#### KColor Settings (LANG=en kcmshell5 colors)
 
 ##### Options:
 
