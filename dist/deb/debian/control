@@ -10,7 +10,7 @@ Architecture: all
 Pre-Depends: curl, unzip | p7zip-full, findutils, coreutils, sed
 Depends: gtk3-nocsd, libgtk-3-0 (>=3.20), libgtk-3-0 (<<3.21)
 Replaces: hedera-theme
-Suggests: fonts-noto, slim, konsole | qterminal | yakuake
-Enhances: slim, libgtk-3-0, gtk3-nocsd, qterminal, konsole, yakuake
+Suggests: fonts-noto, slim, konsole | qterminal | yakuake, kwin-x11 | kwin-wayland, plasma-workspace
+Enhances: slim, libgtk-3-0, gtk3-nocsd, qterminal, konsole, yakuake, kwin-x11, kwin-wayland, plasma-workspace
 Breaks: cinnamon-session-common, gnome-session-bin
-Description: An easier way to install Hedera systemwide
+Description: A quick and dirty way to install the latest Hedera theme systemwide
