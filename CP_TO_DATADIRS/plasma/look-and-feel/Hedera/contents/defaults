@@ -33,3 +33,16 @@ SidePanelDrawFrame=true
 
 [breezerc][Style]
 ViewDrawFocusIndicator=false
+
+[kwinrc][org.kde.kdecoration2]
+BorderSize=Normal
+[kwinrc][org.kde.kdecoration2]
+ButtonsOnLeft=
+[kwinrc][org.kde.kdecoration2]
+ButtonsOnRight=IAX
+[kwinrc][org.kde.kdecoration2]
+CloseOnDoubleClickOnMenu=false
+[kwinrc][org.kde.kdecoration2]
+library=org.kde.kwin.aurorae
+[kwinrc][org.kde.kdecoration2]
+theme=__aurorae__svg__Hedera
