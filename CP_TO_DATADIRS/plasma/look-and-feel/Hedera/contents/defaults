@@ -7,9 +7,6 @@ ColorScheme=Hedera
 [kdeglobals][Icons]
 Theme=Ivy
 
-[kdeglobals][KDE]
-widgetStyle=breeze
-
 [plasmarc][Theme]
 name=Hedera
 
