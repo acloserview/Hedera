@@ -23,7 +23,7 @@ _date=$(date '-R')
 _release=$(date -u +%Y.%m.%d.%H%M)
 build() {
 	cd "${basedir}"
-	for _dir in $(echo $(find ${basedir} -mindepth 1 -maxdepth 1 -type d -name "deb")); do
+	for _dir in $(echo $(find ${basedir} -mindepth 1 -maxdepth 1 -type d -name "deb*")); do
 		cd "$_dir"
 		echo "$PWD"
 		chmod +x debian/rules

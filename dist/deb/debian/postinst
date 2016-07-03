@@ -38,11 +38,6 @@ cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
 #filelist
 mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
 find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-#set as systemwide theme
-if [ ! -f /etc/gtk-3.0/settings.ini ]; then
-    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
-    printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-fi
 #kill the overlay scrollbar
 if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
     cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh

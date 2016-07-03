@@ -24,8 +24,14 @@ _Some themes like SLIM need to be placed into the sysprefix_
 
 ##### Packages(use at your own risk)
 
-* [@ChakraCCR](https://chakraos.org/ccr/packages.php?ID=7737)
-* [@DevuanDEB](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+###### Debian/Devuan >=testing
+
+* [@light](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+* [@complete](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1complete_all.deb)
+
+###### Other
+
+* [@Chakra-CCR](https://chakraos.org/ccr/packages.php?ID=7737)
 
 ### Suggested Settings
 
