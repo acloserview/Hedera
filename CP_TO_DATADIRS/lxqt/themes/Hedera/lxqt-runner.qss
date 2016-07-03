@@ -1,0 +1,25 @@
+#panel {
+	background:rgba(238,234,229,0.95);
+	border:1px solid #92908e;}
+
+#commandList {
+	border:1px solid palette(highlight);
+	padding:0px;
+	margin:0px;}
+
+#closeButton {
+	color:transparent;
+	qproperty-iconSize:22px;
+	border:none;
+	qproperty-icon: url(images/close.png);}
+
+#closeButton:hover,
+#closeButton:pressed{
+	qproperty-icon: url(images/close-active.png);}
+
+#actionButton {
+	padding:5px;
+	color:palette(window);
+	qproperty-iconSize:22px;
+	border:none;
+	qproperty-icon: url(images/arrow.png);}
