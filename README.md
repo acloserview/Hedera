@@ -26,14 +26,14 @@ _Some themes like SLIM need to be placed into the sysprefix_
 
 ###### Debian/Devuan >=testing
 
-* [@light](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
-* [@complete](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1complete_all.deb)
+* [@Light](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+* [@Complete](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1complete_all.deb) , includes the icon theme
 
 ###### Other
 
 * [@Chakra-CCR](https://chakraos.org/ccr/packages.php?ID=7737)
 
-### Suggested Settings
+### Suggested Settings to match the GTK theme
 
 #### Breeze KStyle settings (LANG=en kcmshell5 breezestyleconfig)
 
