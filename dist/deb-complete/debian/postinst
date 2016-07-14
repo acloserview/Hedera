@@ -36,6 +36,7 @@ else
 fi
 ln -s gtk-3.20 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.0
 cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
+
 ##icons
 if [ -d /usr/share/icons/Ivy ]; then
     printf "the Ivy folder already exits - aborting!\n"
@@ -43,16 +44,22 @@ if [ -d /usr/share/icons/Ivy ]; then
 fi
 tar -xvf "${_tmpdir}"/ivy-icon-theme.txz -C /usr/share/icons &&
 rm -f "${_tmpdir}"/ivy-icon-theme.txz
+
 #filelist
+
 mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
 find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
 find /usr/share/icons/Ivy -not -type d >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+
 #set as systemwide theme
+
 if [ ! -f /etc/gtk-3.0/settings.ini ]; then
     cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
     printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
 fi
+
 #kill the overlay scrollbar
+
 if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
     cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh
     printf '/etc/profile.d/gtk3-noosb.sh\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
@@ -60,7 +67,9 @@ fi
 chown -R root:root "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
 chmod -R 755 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
 cp -pR "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/* /usr/share/
+
 ###icon distro
+
 cd /usr/share/icons/Ivy
 auto_distroicon() {
 	if [ $(cat /etc/os-release|grep "^ID=debian$") ];then
@@ -83,7 +92,7 @@ auto_distroicon() {
 	fi
 }
 auto_distroicon
-cat << EOF
+cat <<\EOF
 
 
 
@@ -110,3 +119,4 @@ cat << EOF
 
 
 EOF
+exit 0 
