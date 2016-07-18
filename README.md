@@ -8,15 +8,16 @@
 * Aurorae theme
 * LXQt 0.10 theme
 * [SLiM](https://github.com/iwamatsu/slim) theme
+* A classic Icon theme
 * GTK 3.20 theme
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
 	* keep in mind that the theme won't work in GNOME
-* [Ivy Icons](https://github.com/sixsixfive/Ivy) (optional)
 
 ### How to Install?
 
-Just clone(git clone https://github.com/sixsixfive/Hedera.git) or [download](https://github.com/sixsixfive/Hedera/archive/master.zip) the theme and move the wanted files inside the CP_TO_DATADIRS folder to your SYSDATADIR(usually /usr/share or /usr/local/share) or your XDG_DATADIR (usually (~/.local/share).
+Just clone(git clone https://github.com/sixsixfive/Hedera.git) or [download](https://github.com/sixsixfive/Hedera/archive/master.zip) 
+the theme and move the wanted files inside of the CP_TO_DATADIRS folder to your SYSDATADIR(usually /usr/share or /usr/local/share) or your XDG_DATADIR (usually (~/.local/share).
 
 Note: there is no easier way todo this since every KDE application uses different theme paths!
 
@@ -26,12 +27,7 @@ _Some themes like SLIM need to be placed into the sysprefix_
 
 ###### Debian/Devuan >=testing
 
-* [@Light](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
-* [@Complete](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1complete_all.deb) , includes the icon theme
-
-###### Other
-
-* [@Chakra-CCR](https://chakraos.org/ccr/packages.php?ID=7737)
+* [@testing](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
 
 ### Suggested Settings to match the GTK theme
 
@@ -56,3 +52,7 @@ _Some themes like SLIM need to be placed into the sysprefix_
 * Shade sorted column in lists: OFF
 * Apply colors to non-Qt applications: OFF
 * Contrast: Maximum
+
+### FAQ
+
+* [Icon theme FAQ](https://github.com/sixsixfive/Ivy/blob/master/faq.md)

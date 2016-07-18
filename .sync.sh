@@ -8,8 +8,7 @@ cd ${basedir}
 git add .
 #srsly git...
 LANG=C
-#MESSAGE="$(git status)"
-MESSAGE="Adding Ivy theme"
+MESSAGE="$(git status)"
 #read MESSAGE
 git commit -m "$MESSAGE"
 git push origin master

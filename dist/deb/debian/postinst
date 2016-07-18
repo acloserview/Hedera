@@ -16,7 +16,7 @@ if [ ! -d /usr/share/themes ];then
 fi
 #FIXME add loop/integrity checks
 printf '\n==> Downloading the latest release from GitHub!\n'
-curl -L https://github.com/sixsixfive/Hedera/archive/master.zip > "${_tmpdir}"/Hedera-master.zip --progress-bar
+curl -L https://github.com/sixsixfive/Hedera/archive/master.zip > "${_tmpdir}"/Hedera-master.zip
 #curl -L https://github.com/sixsixfive/Ivy/releases/download/PreRelese/ivy-icon-theme.txz > "${_tmpdir}"/ivy-icon-theme.txz --progress-bar
 printf '\n==> Extracting...\n'
 cd "${_tmpdir}"
