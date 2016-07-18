@@ -17,6 +17,7 @@ fi
 #FIXME add loop/integrity checks
 printf '\n==> Downloading the latest release from GitHub!\n'
 curl -L https://github.com/sixsixfive/Hedera/archive/master.zip > "${_tmpdir}"/Hedera-master.zip --progress-bar
+#curl -L https://github.com/sixsixfive/Ivy/releases/download/PreRelese/ivy-icon-theme.txz > "${_tmpdir}"/ivy-icon-theme.txz --progress-bar
 printf '\n==> Extracting...\n'
 cd "${_tmpdir}"
 if ($type 7z >/dev/null 2>&1); then
@@ -35,10 +36,30 @@ else
 fi
 ln -s gtk-3.20 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.0
 cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
+
+##icons
+#if [ -d /usr/share/icons/Ivy ]; then
+    #printf "the Ivy folder already exits - aborting!\n"
+    #exit 1
+#fi
+#tar -xvf "${_tmpdir}"/ivy-icon-theme.txz -C /usr/share/icons &&
+#rm -f "${_tmpdir}"/ivy-icon-theme.txz
+
 #filelist
+
 mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
 find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+#find /usr/share/icons/Ivy -not -type d >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+
+#set gtk3 systemwide theme
+
+if [ ! -f /etc/gtk-3.0/settings.ini ]; then
+    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
+    printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+fi
+
 #kill the overlay scrollbar
+
 if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
     cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh
     printf '/etc/profile.d/gtk3-noosb.sh\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
@@ -46,4 +67,56 @@ fi
 chown -R root:root "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
 chmod -R 755 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
 cp -pR "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/* /usr/share/
-printf '\n==> Done!\n'
+
+###icon distro
+
+cd /usr/share/icons/Hedera
+auto_distroicon() {
+	if [ $(cat /etc/os-release|grep "^ID=debian$") ];then
+		if dpkg --get-selections|grep siduction &>/dev/null;then
+			_distributor="siduction"
+		else
+			_distributor="debian"
+		fi
+	elif [ $(cat /etc/os-release|grep "^ID=devuan$") ];then
+		_distributor="devuan"
+	elif [ $(cat /etc/os-release|grep "^ID=opensuse$") ];then
+		_distributor="suse"
+	fi
+	if [ -f 48/logos/distributor-$_distributor.png ];then
+		for _dir in $(echo $(find -maxdepth 1 -mindepth 1 -type d));do
+			cd $_dir
+			cp -fv logos/distributor-$_distributor.png logos/emblem-distributor.png
+			cd ..
+		done
+	fi
+}
+auto_distroicon
+cat <<\EOF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+████████▄   ▄██████▄  ███▄▄▄▄      ▄████████  ██████
+███   ▀███ ███    ███ ███▀▀▀██▄   ███    ███  ██████
+███    ███ ███    ███ ███   ███   ███    █▀   ██████
+███    ███ ███    ███ ███   ███  ▄███▄▄▄      ██████
+███    ███ ███    ███ ███   ███ ▀▀███▀▀▀      ██████
+███    ███ ███    ███ ███   ███   ███    █▄   
+███   ▄███ ███    ███ ███   ███   ███    ███   ████
+████████▀   ▀██████▀   ▀█   █▀    ██████████   ████
+
+
+
+EOF
+exit 0 
