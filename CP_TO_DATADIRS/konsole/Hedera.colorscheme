@@ -60,5 +60,24 @@ Color=245,245,245
 
 [General]
 Description=Hedera
+Description[ar]=اللبلاب
+Description[ca]=Heura
+Description[cs]=Břečťan
+Description[da]=Vedbend
+Description[de]=Efeu
+Description[en]=Ivy
+Description[el]=Κισσός
+Description[es]=Hiedra
+Description[fr]=Lierre
+Description[gd]=Eidheann
+Description[it]=Edera
+Description[ja]=ツタ
+Description[la]=Hedera
+Description[lu]=Wantergréng
+Description[nl]=Klimop
+Description[pt]=Hera
+Description[ru]=Плющ
+Description[sv]=Murgröna
+Description[zh]=常春藤
 Opacity=1
 Wallpaper=
