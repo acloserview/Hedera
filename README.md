@@ -56,3 +56,7 @@ _Some themes like SLIM need to be placed into the sysprefix_
 ### FAQ
 
 * [Icon theme FAQ](https://github.com/sixsixfive/Ivy/blob/master/faq.md)
+
+##### Will there ever be an easier way to install this?:
+
+No sorry, KDE fu**ed this up - every other Desktop/WM can use SYSPREFIX/DATADIR/THEMES so why not KDE? 
