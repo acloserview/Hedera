@@ -25,9 +25,13 @@ _Some themes like SLIM need to be placed into the sysprefix_
 
 ##### Packages(use at your own risk)
 
-###### Debian/Devuan >=testing
+###### Chakra
 
-* [@testing](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
+* [CCR](https://chakralinux.org/ccr/packages.php?ID=7780)
+
+###### Debian/Devuan
+
+* [>=testing](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
 
 ### Suggested Settings to match the GTK theme
 
