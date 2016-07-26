@@ -24,17 +24,21 @@ _release=$(date -u +%Y.%m.%d.%H%M)
 build() {
 	cd "${basedir}"
 	for _dir in $(echo $(find ${basedir} -mindepth 1 -maxdepth 1 -type d -name "deb*")); do
+	(
 		cd "$_dir"
 		echo "$PWD"
 		chmod +x debian/rules
 		fakeroot debian/rules binary
 		cd ..
+    )
 	done
 }
 ###start
 install_depends
 cd "${basedir}"
+(
 build
+)
 ##only tested on suse
 #fakeroot alien -r -c -k -v --description="An easier way to install Hedera systemwide" hedera-theme_1.0-1_all.deb
 clean

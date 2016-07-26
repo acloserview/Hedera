@@ -1,0 +1,11 @@
+Source: hedera-theme-default
+Section: x11
+Priority: optional
+Maintainer: Outis <Outis@Odysseus.gr>
+Build-Depends: debhelper (>= 7) 
+Standards-Version: 3.9.6
+
+Package: hedera-theme-default
+Architecture: all
+Depends: hedera-theme
+Description: Sets hedera as the system theme.

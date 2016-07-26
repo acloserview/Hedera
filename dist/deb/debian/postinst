@@ -53,17 +53,17 @@ find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_
 
 #set gtk3 systemwide theme
 
-if [ ! -f /etc/gtk-3.0/settings.ini ]; then
-    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
-    printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-fi
+#if [ ! -f /etc/gtk-3.0/settings.ini ]; then
+#    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
+#    printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+#fi
 
 #kill the overlay scrollbar
 
-if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
-    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh
-    printf '/etc/profile.d/gtk3-noosb.sh\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-fi
+#if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
+#    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh
+#    printf '/etc/profile.d/gtk3-noosb.sh\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+#fi
 chown -R root:root "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
 chmod -R 755 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
 cp -pR "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/* /usr/share/
