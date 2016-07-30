@@ -8,7 +8,7 @@
 * Aurorae theme
 * LXQt 0.10 theme
 * [SLiM](https://github.com/iwamatsu/slim) theme
-* A classic Icon theme
+* [A classic Icon theme](https://github.com/sixsixfive/Hedera-icons/blob/master/readme.md)
 * GTK 3.20 theme
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
@@ -19,11 +19,9 @@
 Just clone(git clone https://github.com/sixsixfive/Hedera.git) or [download](https://github.com/sixsixfive/Hedera/archive/master.zip) 
 the theme and move the wanted files inside of the CP_TO_DATADIRS folder to your SYSDATADIR(usually /usr/share or /usr/local/share) or your XDG_DATADIR (usually (~/.local/share).
 
-Note: there is no easier way todo this since every KDE application uses different theme paths!
-
 _Some themes like SLIM need to be placed into the sysprefix_
 
-##### Packages(use at your own risk)
+##### Packages (as always use at your own risk)
 
 ###### Chakra
 
