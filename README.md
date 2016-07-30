@@ -2,10 +2,12 @@
 
 ##### Themes available:
 
+### Plasma 5
 * Plasma Look'n'Feel
-* Konsole/Yakuake/Qterm ColorScheme
+* Konsole/Yakuake ColorScheme
 * KDE ColorScheme
 * Aurorae theme
+### Other
 * LXQt 0.10 theme
 * [SLiM](https://github.com/iwamatsu/slim) theme
 * [A classic Icon theme](https://github.com/sixsixfive/Hedera-icons/blob/master/readme.md)
@@ -60,7 +62,7 @@ _The Config package includes all config files to set Hedera as default theme, If
 
 ### FAQ
 
-* [Icon theme FAQ](https://github.com/sixsixfive/Ivy/blob/master/faq.md)
+* [Icon theme FAQ](https://github.com/sixsixfive/Hedera-icons/blob/master/faq.md)
 
 ##### Will there ever be an easier way to install this?:
 
