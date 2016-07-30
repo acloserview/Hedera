@@ -2,12 +2,13 @@
 
 ##### Themes available:
 
-### Plasma 5
+###### Plasma 5
 * Plasma Look'n'Feel
 * Konsole/Yakuake ColorScheme
 * KDE ColorScheme
 * Aurorae theme
-### Other
+
+###### Other
 * LXQt 0.10 theme
 * [SLiM](https://github.com/iwamatsu/slim) theme
 * [A classic Icon theme](https://github.com/sixsixfive/Hedera-icons/blob/master/readme.md)
