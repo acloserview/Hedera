@@ -1,9 +1,3 @@
-/*************************************
- * Linux Theme                       *
- * Author: nowrep                    *
- * Using native widgets and icons    *
- *************************************/
-
 *[html-link-look="true"]
 {
     color: palette(link);
@@ -126,7 +120,6 @@ IconProvider
 {
     qproperty-themeIcon: "starred";
     qproperty-fixedsize: 16px 16px;
-
 }
 
 #locationbar-siteicon
