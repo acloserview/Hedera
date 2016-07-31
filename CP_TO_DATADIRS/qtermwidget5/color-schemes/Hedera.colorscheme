@@ -8,7 +8,7 @@ Color=0,0,0
 Color=23,23,23
 
 [Color0Intense]
-Color=70,70,70
+Color=83,83,83
 
 [Color1]
 Color=208,38,4
@@ -17,37 +17,37 @@ Color=208,38,4
 Color=228,41,3
 
 [Color2]
-Color=102,176,62
+Color=74,126,44
 
 [Color2Intense]
 Color=116,196,69
 
 [Color3]
-Color=235,193,5
+Color=145,119,2
 
 [Color3Intense]
 Color=255,213,6
 
 [Color4]
-Color=82,136,209
+Color=31,52,80
 
 [Color4Intense]
 Color=90,150,229
 
 [Color5]
-Color=168,104,212
+Color=109,67,138
 
 [Color5Intense]
 Color=183,114,232
 
 [Color6]
-Color=235,75,113
+Color=177,56,86
 
 [Color6Intense]
 Color=255,82,122
 
 [Color7]
-Color=0,196,235
+Color=0,125,147
 
 [Color7Intense]
 Color=0,213,255

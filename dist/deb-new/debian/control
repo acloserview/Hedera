@@ -1,0 +1,16 @@
+Source: hedera-theme
+Section: x11
+Priority: optional
+Maintainer: Outis <Outis@Odysseus.gr>
+Build-Depends: debhelper (>= 7) 
+Standards-Version: 3.9.6
+
+Package: hedera-theme
+Architecture: all
+Pre-Depends: curl, unzip | p7zip-full, findutils, coreutils, sed, tar, xz-utils
+Depends: gtk3-nocsd, fonts-noto, libgtk-3-0 (>=3.20), libgtk-3-0 (<<3.21)
+Replaces: hedera-theme, ivy-icon-theme
+Suggests: slim, konsole | qterminal | yakuake, kwin-x11 | kwin-wayland, plasma-workspace | lxqt-common, breeze, kde-style-breeze, kde-style-breeze-qt4, breeze-cursor-theme
+Enhances: slim, libgtk-3-0, gtk3-nocsd, qterminal, konsole, yakuake, kwin-x11, kwin-wayland, plasma-workspace, lxqt-common
+Breaks: cinnamon-session-common, gnome-session-bin, ivy-icon-theme
+Description: A quick and dirty way to install the latest Hedera-theme systemwide
