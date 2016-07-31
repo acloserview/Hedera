@@ -1,0 +1,324 @@
+/*************************************
+ * Linux Theme                       *
+ * Author: nowrep                    *
+ * Using native widgets and icons    *
+ *************************************/
+
+*[html-link-look="true"]
+{
+    color: palette(link);
+    text-decoration: underline;
+}
+
+/*MainWindow*/
+#statusbar-ip-label
+{
+    padding-right: 5px;
+}
+
+/*NavigationBar*/
+#navigation-button-back
+{
+    qproperty-themeIcon: "go-previous";
+}
+
+#navigation-button-next
+{
+    qproperty-themeIcon: "go-next";
+}
+
+#navigation-button-stop
+{
+    qproperty-themeIcon: "process-stop";
+}
+
+#navigation-button-reload
+{
+    qproperty-themeIcon: "view-refresh";
+}
+
+#navigation-button-home
+{
+    qproperty-themeIcon: "go-home";
+}
+
+#navigation-button-addtab
+{
+    qproperty-themeIcon: "tab-new";
+}
+
+#navigation-button-supermenu
+{
+    qproperty-themeIcon: "open-menu";
+}
+
+#navigation-button-exitfullscreen
+{
+    qproperty-themeIcon: "view-restore";
+}
+
+/*TabWidget*/
+#tabbar::tab
+{
+    max-height: 26px;
+}
+
+#tabbar-button-right
+{
+    qproperty-themeIcon: "action-right";
+    qproperty-fixedsize: 16px 25px;
+}
+
+#tabbar-button-left
+{
+    qproperty-themeIcon: "action-left";
+    qproperty-fixedsize: 16px 25px;
+}
+
+#tabwidget-button-opentabs
+{
+    qproperty-themeIcon: "action-down";
+    qproperty-fixedsize: 16px 25px;
+}
+
+#tabwidget-button-closedtabs
+{
+    qproperty-themeIcon: "user-trash-full";
+    qproperty-fixedsize: 22px 25px;
+}
+
+#tabwidget-button-addtab
+{
+    qproperty-themeIcon: "tab-new";
+    qproperty-fixedsize: 22px 25px;
+}
+
+/*IconProvider*/
+IconProvider
+{
+    qproperty-bookmarkIcon: url(img/add-bookmark.png);
+}
+
+#settingsIcon {
+    qproperty-themeIcon: "news-feed";
+}
+
+/*LocationBar*/
+#locationbar
+{
+    qproperty-minHeight: 28;
+    qproperty-leftMargin: 22;
+}
+
+#locationbar[secured="true"]
+{
+    color: black;
+    background-color: #ffffbc;
+}
+
+#locationbar-bookmarkicon
+{
+    qproperty-themeIcon: "non-starred";
+    qproperty-fixedsize: 16px 16px;
+}
+
+#locationbar-bookmarkicon[bookmarked="true"]
+{
+    qproperty-themeIcon: "starred";
+    qproperty-fixedsize: 16px 16px;
+
+}
+
+#locationbar-siteicon
+{
+    padding-left: 6px;
+    border-image: url(img/transp.png);
+    qproperty-fixedsize: 22px 16px;
+}
+
+#locationbar-rss-icon
+{
+    qproperty-themeIcon: "news-feed";
+    qproperty-fixedsize: 16px 16px;
+}
+
+#locationbar-goicon
+{
+    qproperty-themeIcon: "go-jump";
+    qproperty-fixedsize: 16px 16px;
+}
+
+#locationbar-down-icon
+{
+    padding-right: 2px;
+    qproperty-pixmap: url(img/dropdown.png);
+}
+
+#locationbar-autofillicon
+{
+    qproperty-themeIcon: "password";
+    qproperty-fixedsize: 16px 16px;
+}
+
+/*WebSearchBar*/
+#websearchbar
+{
+    qproperty-minHeight: 28;
+    qproperty-leftMargin: 30;
+}
+
+#websearchbar-searchbutton
+{
+    qproperty-fixedsize: 22px 16px;
+    qproperty-themeIcon: "edit-find";
+}
+
+#websearchbar-searchprovider-comobobox
+{
+    border-image: url(img/websearch.png);
+    padding-right: 18px;
+    padding-left: 1px;
+    qproperty-fixedsize: 42px 16px;
+}
+
+/*BookmarksToolbar*/
+#bookmarksbar QToolButton
+{
+    border-image: url(img/transp.png);
+    border-width: 0px;
+    height: 15px;
+}
+
+/*SideBar*/
+#sidebar
+{
+    background: palette(window);
+}
+
+/*SourceViewer*/
+#sourceviewer-textedit
+{
+    border:none;
+}
+
+/*SourceViewerSearch*/
+SourceViewerSearch #lineEdit[notfound="true"]
+{
+    background:#ff6666;
+}
+
+/*SearchToolbar*/
+SearchToolBar #lineEdit[notfound="true"]
+{
+    background:#ff6666;
+}
+
+/*Click2Flash*/
+
+#click2flash-frame
+{
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 3px;
+    background-color: lightgrey;
+}
+
+#click2flash-toolbutton
+{
+    background: url(img/plugin.png) no-repeat;
+    background-position: center;
+    border: none;
+}
+
+#click2flash-toolbutton:hover
+{
+    background: url(img/plugin-run.png) no-repeat;
+    background-position: center;
+    border:none;
+}
+
+/*RSSManager*/
+#rssmanager-frame
+{
+    border: none;
+}
+
+RSSManager QTabBar::tab
+{
+    max-width:100px;
+}
+
+/*AboutDialog*/
+AboutDialog #label
+{
+    background: none;
+}
+
+AboutDialog #textBrowser
+{
+}
+
+/*DesktopNotification*/
+DesktopNotification
+{
+    background: transparent;
+}
+
+DesktopNotification #frame
+{
+    border: 1px solid rgba(0,0,0,0.4);
+    background: palette(window);
+}
+
+DesktopNotification #heading
+{
+    font: bold;
+    font-size: 1.3em;
+}
+
+/*BrowsingLibrary*/
+BrowsingLibrary #tabs
+{
+    qproperty-bgPixmap: url(img/hilight.png);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius:3px;
+    margin:5px;
+}
+
+BrowsingLibrary #frame
+{
+
+    background: palette(window);
+
+}
+
+/*Downloads*/
+DownloadItem #fileName
+{
+    font-size: 1.2em;
+}
+
+DownloadManager #list
+{
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+/*JavaScript Dialogs*/
+#jsFrame
+{
+    background: url(img/semi-transp.png);
+}
+
+QFrame[js-frame="true"]
+{
+    border: 1px solid  black;
+    border-bottom: 0px;
+    background-color: white;
+}
+
+QFrame[js-frame2="true"]
+{
+    border: 1px solid  black;
+    border-top: 0px;
+    background-color: #f3f3f3;
+}
+

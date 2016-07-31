@@ -1,0 +1,27 @@
+#navigation-button-next
+{
+    qproperty-themeIcon: "go-next-rtl";
+}
+
+#navigation-button-back
+{
+	qproperty-themeIcon: "go-previous-ltr";
+}
+
+#locationbar-goicon
+{
+    qproperty-themeIcon: "go-jump-ltr";
+    qproperty-fixedsize: 16px 16px;
+}
+
+#tabbar-button-right
+{
+    qproperty-themeIcon: "action-left";
+    qproperty-fixedsize: 16px 25px;
+}
+
+#tabbar-button-left
+{
+    qproperty-themeIcon: "action-right";
+    qproperty-fixedsize: 16px 25px;
+}
