@@ -5,12 +5,12 @@
 
 #navigation-button-back
 {
-	qproperty-themeIcon: "go-previous-ltr";
+	qproperty-themeIcon: "go-previous-rtl";
 }
 
 #locationbar-goicon
 {
-    qproperty-themeIcon: "go-jump-ltr";
+    qproperty-themeIcon: "go-jump-rtl";
     qproperty-fixedsize: 16px 16px;
 }
 
