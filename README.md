@@ -1,4 +1,6 @@
-[![alt text](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.sshot.png)](https://raw.githubusercontent.com/sixsixfive/Hedera/master/.shot.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sixsixfive/Hedera/master/.preview.png">
+</p>
 
 ##### Themes available:
 
