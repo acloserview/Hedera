@@ -13,6 +13,7 @@
 ###### Other
 * LXQt 0.10 theme
 * [SLiM](https://github.com/iwamatsu/slim) theme
+* [QupZilla](hhttp://www.qupzilla.com/) theme
 * [A classic Icon theme](https://github.com/sixsixfive/Hedera-icons/blob/master/readme.md)
 * GTK 3.20 theme
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
