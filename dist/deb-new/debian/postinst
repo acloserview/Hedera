@@ -1,4 +1,7 @@
 #!/bin/sh
+## fixme!
+# - use symlinks instead of placing files everywhere
+LANG=C
 set -e
 _tmpdir=/tmp
 
@@ -7,6 +10,7 @@ if [ -d "${_tmpdir}"/Hedera-master ]; then
 	rm -rf "${_tmpdir}"/Hedera-master
 fi
 }
+
 func_checks() {
 if [ ! -d /usr/share/themes ];then
     printf "/usr isn't your default prefix - aborting!\n"
@@ -64,25 +68,7 @@ func_instdata() {
 	cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
 	mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
 	find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-
-#set gtk3 systemwide theme
-
-#if [ ! -f /etc/gtk-3.0/settings.ini ]; then
-#    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
-#    printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-#fi
-
-#kill the overlay scrollbar
-
-#if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
-#    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh
-#    printf '/etc/profile.d/gtk3-noosb.sh\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-#fi
-chown -R root:root "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
-chmod -R 755 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
-cp -pR "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/* /usr/share/
-
-###icon distro
+}
 
 func_distroicon() {
 	cd /usr/share/icons/Hedera
