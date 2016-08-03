@@ -63,7 +63,7 @@ func_download() {
 
 func_instdata() {
 	_gtk3version=$(dpkg-query -W libgtk-3-0|cut -f2|sed 's/\.[^.]*$//')
-	ln -s $_gtk3version "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.0
+	ln -s gtk-${_gtk3version} "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.0
 	cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
 	mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
 	find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
