@@ -1,77 +1,87 @@
 #!/bin/sh
+## fixme!
+# - use symlinks instead of placing files everywhere
+LANG=C
 set -e
-type curl >/dev/null 2>&1 || {
-	echo >&2 "I require curl but it's not installed. Aborting.";exit 1;}
-type sed >/dev/null 2>&1 || {
-	echo >&2 "I require sed but it's not installed. Aborting.";exit 1;}
-type find >/dev/null 2>&1 || {
-	echo >&2 "I require findutils but it's not installed. Aborting.";exit 1;}
 _tmpdir=/tmp
+func_clean() {
 if [ -d "${_tmpdir}"/Hedera-master ]; then
 	rm -rf "${_tmpdir}"/Hedera-master
 fi
+}
+
+func_checks() {
 if [ ! -d /usr/share/themes ];then
     printf "/usr isn't your default prefix - aborting!\n"
     exit 1
 fi
-#FIXME add loop/integrity checks
-printf '\n==> Downloading the latest release from GitHub!\n'
-curl -L https://github.com/sixsixfive/Hedera/archive/master.zip > "${_tmpdir}"/Hedera-master.zip
-#curl -L https://github.com/sixsixfive/Ivy/releases/download/PreRelese/ivy-icon-theme.txz > "${_tmpdir}"/ivy-icon-theme.txz --progress-bar
-printf '\n==> Extracting...\n'
-cd "${_tmpdir}"
-if ($type 7z >/dev/null 2>&1); then
-	7z x "${_tmpdir}"/Hedera-master.zip -o"${_tmpdir}"
-elif ($type unzip >/dev/null 2>&1); then
-	unzip Hedera-master.zip -d "${_tmpdir}"
-else
-	printf "\nYou either need 7z or unzip - Aborting!.\n"
-	exit 1
-fi
-if [ -f "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.20/gtk.css ]; then
-	rm -f "${_tmpdir}"/Hedera-master.zip
-else
-	printf "\nfailed to extract\n"
-	exit 1
-fi
-ln -s gtk-3.20 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.0
-cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
+}
 
-##icons
-#if [ -d /usr/share/icons/Ivy ]; then
-    #printf "the Ivy folder already exits - aborting!\n"
-    #exit 1
-#fi
-#tar -xvf "${_tmpdir}"/ivy-icon-theme.txz -C /usr/share/icons &&
-#rm -f "${_tmpdir}"/ivy-icon-theme.txz
+func_download() {
+	printf '\n==> Downloading the latest release from GitHub!\n'
+    _downloaderhelpers="curl wget svn git"
+    for _downloaderhelper in $_downloaderhelpers; do
+        type $_downloaderhelper &>/dev/null && _downloader=$_gui 
+    done
+	case $_downloaderhelper in
+		git)
+			git clone https://github.com/sixsixfive/Hedera.git "${_tmpdir}"/Hedera-master;;
+		svn)
+			svn co https://github.com/sixsixfive/Hedera/trunk "${_tmpdir}"/Hedera-master;;
+		wget|curl)
+			if ($type 7z >/dev/null 2>&1); then
+				_unzip=7z
+			elif ($type unzip >/dev/null 2>&1); then
+				_unzip=unzip
+			else
+				printf "\nYou either need 7z or unzip - Aborting!.\n"
+				exit 1
+			fi
+			case $_downloaderhelper in
+				wget)
+					wget https://github.com/sixsixfive/Hedera/archive/master.zip -O "${_tmpdir}"/Hedera-master.zip;;
+				curl)
+					curl -L https://github.com/sixsixfive/Hedera/archive/master.zip > "${_tmpdir}"/Hedera-master.zip;;
+			esac
+			printf '\n==> Extracting...\n'
+			cd "${_tmpdir}"
+			if ($type 7z >/dev/null 2>&1); then
+				7z x "${_tmpdir}"/Hedera-master.zip -o"${_tmpdir}"
+			elif ($type unzip >/dev/null 2>&1); then
+				unzip Hedera-master.zip -d "${_tmpdir}"
+			fi;;
+	esac
+	if [ -f "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.20/gtk.css ]; then
+		if [ -f Hedera-master.zip ]; then
+			rm -f "${_tmpdir}"/Hedera-master.zip
+		fi
+	else
+		printf "\nfailed to extract\n"
+		exit 1
+	fi
+}
 
-#filelist
+func_instdata() {
+	_gtk3version=$(dpkg-query -W libgtk-3-0|cut -f2|sed 's/\.[^.]*$//')
+	ln -s $_gtk3version "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/themes/Hedera/gtk-3.0
+	cd "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/
+	mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
+	find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+	chown -R root:root "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
+	chmod -R 755 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
+	cp -pR "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/* /usr/share/
+}
 
-mkdir -p "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme
-find . -not -type d|sed 's#^./#/usr/share/#' >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-#find /usr/share/icons/Ivy -not -type d >>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
+func_instconfigs() {
+	cd "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS/
+	find . -not -type d|sed 's#^./#/usr/share/#' >>/usr/share/Hedera-theme/files
+	chown -R root:root "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS
+	chmod -R 755 "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS
+	cp -pR "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/DEFAULT-CONFIGS
+}
 
-#set gtk3 systemwide theme
-
-#if [ ! -f /etc/gtk-3.0/settings.ini ]; then
-#    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/gtk-3.0/settings.ini /etc/gtk-3.0/settings.ini
-#    printf '/etc/gtk-3.0/settings.ini\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-#fi
-
-#kill the overlay scrollbar
-
-#if [ ! -f /etc/profile.d/gtk3-noosb.sh ]; then
-#    cp "${_tmpdir}"/Hedera-master/CONFIGS/etc/profile.d/gtk3-noosb.sh /etc/profile.d/gtk3-noosb.sh
-#    printf '/etc/profile.d/gtk3-noosb.sh\n'>>"${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/files
-#fi
-chown -R root:root "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
-chmod -R 755 "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS
-cp -pR "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/* /usr/share/
-
-###icon distro
-
-cd /usr/share/icons/Hedera
-auto_distroicon() {
+func_distroicon() {
+	cd /usr/share/icons/Hedera
 	if [ $(cat /etc/os-release|grep "^ID=debian$") ];then
 		if dpkg --get-selections|grep siduction &>/dev/null;then
 			_distributor="siduction"
@@ -91,7 +101,16 @@ auto_distroicon() {
 		done
 	fi
 }
-auto_distroicon
+
+#start here!
+
+
+func_checks
+func_download
+func_instdata
+func_instconfigs
+func_clean
+func_distroicon
 cat <<\EOF
 
 
@@ -116,7 +135,50 @@ cat <<\EOF
 ███   ▄███ ███    ███ ███   ███   ███    ███   ████
 ████████▀   ▀██████▀   ▀█   █▀    ██████████   ████
 
+########################################################################
+### NOTE: ##############################################################
+########################################################################
 
+Hedera will not set ANY theme or config by default, however it does 
+include some example configs in /usr/share/Hedera-theme/DEFAULT-CONFIGS
+
+The following themes have been installed:
+
+ - Icon theme (/usr/share/icons/Hedera)
+ - GTK3 theme (/usr/share/themes/Hedera)
+ - Plasma5 Look'n'Feel (/usr/share/plasma/look-and-feel/Hedera)
+ - Plasma5 theme (/usr/share/plasma/desktoptheme/Hedera)
+ - Plasma5 color-scheme (/usr/share/color-schemes/Hedera.colors)
+ - Plasma5 wallpaper (/usr/share/wallpapers/Hedera)
+ - Konsole profiles & color-schemes (/usr/share/konole/Hedera*)
+ - KWin themes (/usr/share/aurorae/themes/Hedera*)
+ - QupZilla theme (/usr/share/qupzilla/themes/Hedera)
+ - Qterm color-scheme (/usr/share/qtermwidget5/color-schemes/Hedera*)
+ - LXQt theme (/usr/share/lxqt/themes/hedera)
+ - SLiM theme (/usr/share/slim/themes/hedera)
+
+The theme might also appear under the following names(depends on you LC)
+
+Name=Hedera
+Name[ar]=اللبلاب
+Name[ca]=Heura
+Name[cs]=Břečťan
+Name[da]=Vedbend
+Name[de]=Efeu
+Name[en]=Ivy
+Name[el]=Κισσός
+Name[es]=Hiedra
+Name[fr]=Lierre
+Name[gd]=Eidheann
+Name[it]=Edera
+Name[ja]=ツタ
+Name[la]=Hedera
+Name[lu]=Wantergréng
+Name[nl]=Klimop
+Name[pt]=Hera
+Name[ru]=Плющ
+Name[sv]=Murgröna
+Name[zh]=常春藤
 
 EOF
 exit 0 

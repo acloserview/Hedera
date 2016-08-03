@@ -1,16 +1,20 @@
 #!/bin/sh
 
 set -e
+if [ -f /usr/share/Hedera-theme/files ]; then
+    while read _file; do
+        if [ -f "$_file" ];then
+            rm -fv "$_file"
+        fi
+    done < /usr/share/Hedera-theme/files
+fi
 
-while read _file; do
-	if [ -f "$_file" ];then
-		rm -fv "$_file"
-	fi
-done < /usr/share/Hedera-theme/files
 if [ -f /usr/share/themes/Hedera/gtk-3.0/gtk.css ];then
 	printf "\nremoval failed - Aborting!\n"
 	exit 1
 fi
-rm -rf /usr/share/Hedera-theme
 
+if [ -d /usr/share/Hedera-theme ];then
+    rm -rf /usr/share/Hedera-theme
+fi
 printf '\n==> Done!\n'

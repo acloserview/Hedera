@@ -7,10 +7,10 @@ Standards-Version: 3.9.6
 
 Package: hedera-theme
 Architecture: all
-Pre-Depends: curl, unzip | p7zip-full, findutils, coreutils, sed, tar, xz-utils
-Depends: gtk3-nocsd, fonts-noto, libgtk-3-0 (>=3.20), libgtk-3-0 (<<3.21)
+Pre-Depends: curl | wget | git | subversion, unzip | p7zip-full, findutils, coreutils, sed
+Depends: fonts-noto-mono, fonts-noto-hinted
 Replaces: hedera-theme, ivy-icon-theme
-Suggests: slim, konsole | qterminal | yakuake, kwin-x11 | kwin-wayland, plasma-workspace | lxqt-common, breeze, kde-style-breeze, kde-style-breeze-qt4, breeze-cursor-theme
-Enhances: slim, libgtk-3-0, gtk3-nocsd, qterminal, konsole, yakuake, kwin-x11, kwin-wayland, plasma-workspace, lxqt-common
-Breaks: cinnamon-session-common, gnome-session-bin, ivy-icon-theme
+Breaks: libgtk-3-0 (<<3.20), libgtk-3-0 (>=3.21)
+Recommends: konsole | qterminal | yakuake, kwin-x11 | kwin-wayland, plasma-workspace | lxqt-common, breeze, kde-style-breeze, kde-style-breeze-qt4
+Suggests: slim, qarma | yad | zenity | mate-dialogs, gtk3-nocsd, libgtk-3-0 (>=3.20), breeze-cursor-theme
 Description: A quick and dirty way to install the latest Hedera-theme systemwide

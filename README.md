@@ -29,16 +29,9 @@ _Some themes like SLIM need to be placed into the sysprefix_
 
 ##### Packages (as always use at your own risk)
 
-###### Chakra
-
-* [CCR](https://chakralinux.org/ccr/packages.php?ID=7780)
-
 ###### Devuan/Debian/Neon and other deb-based systems
 
-* [Data](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_1.0-1_all.deb)
-* [Config](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme-default_1.0-1_all.deb)
-
-_The Config package includes all config files to set Hedera as default theme, If your Distribution uses heavy customization this package could also conflict with some of your distribution packages!_
+* [DEB](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_2.0-1_all.deb)
 
 ### Suggested Settings to match the GTK theme
 
