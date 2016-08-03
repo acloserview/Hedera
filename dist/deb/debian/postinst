@@ -74,10 +74,10 @@ func_instdata() {
 
 func_instconfigs() {
 	cd "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS/
-	find . -not -type d|sed 's#^./#/usr/share/#' >>/usr/share/Hedera-theme/files
+#	find . -not -type d|sed 's#^./#/usr/share/#' >>/usr/share/Hedera-theme/files
 	chown -R root:root "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS
 	chmod -R 755 "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS
-	cp -pR "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS "${_tmpdir}"/Hedera-master/CP_TO_DATADIRS/Hedera-theme/DEFAULT-CONFIGS
+	cp -pR "${_tmpdir}"/Hedera-master/DEFAULT-CONFIGS /usr/share/Hedera-theme
 }
 
 func_distroicon() {
