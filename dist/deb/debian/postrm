@@ -4,7 +4,7 @@ set -e
 if [ -f /usr/share/Hedera-theme/files ]; then
     while read _file; do
         if [ -f "$_file" ];then
-            rm -fv "$_file"
+            rm -f "$_file"
         fi
     done < /usr/share/Hedera-theme/files
 fi
