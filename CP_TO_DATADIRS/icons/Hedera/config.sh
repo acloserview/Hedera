@@ -33,10 +33,10 @@ auto_distroicon() {
 	if [ -f /etc/manjaro-release ];then
 		_distributor="manjaro"
 	fi
-	if [ -f 48/logos/distributor-$_distributor.png ];then
-		for _dir in $(echo $(find -maxdepth 1 -mindepth 1 -type d));do
+	if [ -f "${_basedir}"/48/logos/distributor-$_distributor.png ];then
+		for _dir in $(echo $(find "${_basedir}" -maxdepth 1 -mindepth 1 -type d));do
 			cd $_dir
-			cp -fv logos/distributor-$_distributor.png logos/emblem-distributor.png
+			cp -fv "$_dir"/logos/distributor-$_distributor.png "$_dir"/logos/emblem-distributor.png
 			cd $_basedir
 		done
 	fi
@@ -45,23 +45,23 @@ auto_distroicon() {
 custom_distroicon() {
 	printf "Please enter the name of the icon(eg: kde for distributor-kde.png)\n\n"
 	read _customiconname
-	if [ ! -f 48/logos/distributor-$_customiconname.png ];then
+	if [ ! -f "${_basedir}"/48/logos/distributor-$_customiconname.png ];then
 		printf "\ndistributor-$_customiconname.png does not exist - Aborting!\n"
 		exit 1
 	else
 		_distributor="$_customiconname"
 	fi
-	for _dir in $(echo $(find -maxdepth 1 -mindepth 1 -type d));do
+	for _dir in $(echo $(find "${_basedir}" -maxdepth 1 -mindepth 1 -type d));do
 		cd $_dir
-		cp -fv logos/distributor-$_distributor.png logos/emblem-distributor.png
+		cp -fv "$_dir"/logos/distributor-$_distributor.png "$_dir"/logos/emblem-distributor.png
 		cd $_basedir
 	done
 }
 
 reset_distroicon() {
-	for _dir in $(echo $(find -maxdepth 1 -mindepth 1 -type d));do
+	for _dir in $(echo $(find "${_basedir}" -maxdepth 1 -mindepth 1 -type d));do
 		cd $_dir
-		cp -fv logos/emblem-ivy.png logos/emblem-distributor.png
+		cp -fv "$_dir"/logos/emblem-ivy.png "$_dir"/logos/emblem-distributor.png
 		cd $_basedir
 	done
 }
@@ -71,8 +71,7 @@ toggleqtworkaround() {
 		printf "disabling Qt-workaround\n"
 		mv -v index.theme index.theme.qt
 		mv -v index.theme.xdg index.theme
-	fi
-	if [ -f index.theme.qt ];then
+	elif [ -f index.theme.qt ];then
 		printf "enabling Qt-workaround\n"
 		mv -v index.theme index.theme.xdg
 		mv -v index.theme.qt index.theme
@@ -84,8 +83,8 @@ createsymbolicsymlinks() {
 	unset "_tmpicons"
 	if [ -d /usr/share/icons ];then
 		_prefix=/usr
-	elif [ -d $(getconf PATH| sed -e 's/\/bin//g' -e 's/://g')/share/icons ];then
-		_prefix=$(getconf PATH| sed -e 's/\/bin//g' -e 's/://g')
+	elif [ -d $(getconf PATH| sed 's/\/bin//g;s/://g')/share/icons ];then
+		_prefix=$(getconf PATH| sed 's/\/bin//g;s/://g')
 	else
 		printf "couldn't find prefix"
 	fi
