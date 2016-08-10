@@ -90,6 +90,8 @@ func_distroicon() {
 		fi
 	elif [ $(cat /etc/os-release|grep "^ID=devuan$") ];then
 		_distributor="devuan"
+	elif [ $(cat /etc/os-release|grep "^ID=neon$") ];then
+		_distributor="neon"
 	elif [ $(cat /etc/os-release|grep "^ID=opensuse$") ];then
 		_distributor="suse"
 	fi
