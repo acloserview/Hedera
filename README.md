@@ -9,6 +9,7 @@
 * Konsole/Yakuake ColorScheme
 * KDE ColorScheme
 * Aurorae theme
+* Yakuake Skin
 
 ###### Other
 * LXQt 0.10 theme
