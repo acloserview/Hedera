@@ -23,6 +23,27 @@ Comment=Pure XDG-theme
 Example=emblem-distributor
 Inherits=hicolor
 
+_basesizes="16 22 32 48"
+_scales48="96 144 192 240"
+
+##KDE
+DesktopDefault=48
+DesktopSizes=16,22,24,32,48,96,144,192,240
+ToolbarDefault=22
+ToolbarSizes=16,22,24,32,48,96,144,192,240
+MainToolbarDefault=22
+MainToolbarSizes=16,22,24,32,48,96,144,192,240
+SmallDefault=16
+SmallSizes=16,22,24,32,48,96,144,192,240
+PanelDefault=32
+PanelSizes=16,22,24,32,48,96,144,192,240
+DialogDefault=48
+DialogSizes=16,22,24,32,48,96,144,192,240
+KDE-Extensions=.png
+DisplayDepth=32
+FollowsColorScheme=false
+
+
 ##Dirs
 Directories=16/actions,16/applications,16/animations,16/devices,16/emoticons,16/folders,16/international,16/logos,16/menus,16/mimetypes,16/status,16/misc,16/misc-animations,16/misc-mimetypes,16/misc-filesystems,22/actions,22/applications,22/animations,22/devices,22/emoticons,22/folders,22/international,22/logos,22/menus,22/mimetypes,22/status,22/misc,22/misc-animations,22/misc-mimetypes,22/misc-filesystems,32/actions,32/applications,32/animations,32/devices,32/emoticons,32/folders,32/international,32/logos,32/menus,32/mimetypes,32/status,32/misc,32/misc-animations,32/misc-mimetypes,32/misc-filesystems,48/actions,48/applications,48/animations,48/devices,48/emoticons,48/folders,48/international,48/logos,48/menus,48/mimetypes,48/status,48/misc,48/misc-animations,48/misc-mimetypes,48/misc-filesystems,96/actions,96/applications,96/animations,96/devices,96/emoticons,96/folders,96/international,96/logos,96/menus,96/mimetypes,96/status,96/misc,96/misc-animations,96/misc-mimetypes,96/misc-filesystems,144/actions,144/applications,144/animations,144/devices,144/emoticons,144/folders,144/international,144/logos,144/menus,144/mimetypes,144/status,144/misc,144/misc-animations,144/misc-mimetypes,144/misc-filesystems,192/actions,192/applications,192/animations,192/devices,192/emoticons,192/folders,192/international,192/logos,192/menus,192/mimetypes,192/status,192/misc,192/misc-animations,192/misc-mimetypes,192/misc-filesystems,240/actions,240/applications,240/animations,240/devices,240/emoticons,240/folders,240/international,240/logos,240/menus,240/mimetypes,240/status,240/misc,240/misc-animations,240/misc-mimetypes,240/misc-filesystems,24/actions,24/applications,24/animations,24/devices,24/emoticons,24/folders,24/international,24/logos,24/menus,24/mimetypes,24/status,24/misc,24/misc-animations,24/misc-mimetypes,24/misc-filesystems,64/actions,64/applications,64/animations,64/devices,64/emoticons,64/folders,64/international,64/logos,64/menus,64/mimetypes,64/status,64/misc,64/misc-animations,64/misc-mimetypes,64/misc-filesystems,72/actions,72/applications,72/animations,72/devices,72/emoticons,72/folders,72/international,72/logos,72/menus,72/mimetypes,72/status,72/misc,72/misc-animations,72/misc-mimetypes,72/misc-filesystems,80/actions,80/applications,80/animations,80/devices,80/emoticons,80/folders,80/international,80/logos,80/menus,80/mimetypes,80/status,80/misc,80/misc-animations,80/misc-mimetypes,80/misc-filesystems,112/actions,112/applications,112/animations,112/devices,112/emoticons,112/folders,112/international,112/logos,112/menus,112/mimetypes,112/status,112/misc,112/misc-animations,112/misc-mimetypes,112/misc-filesystems,128/actions,128/applications,128/animations,128/devices,128/emoticons,128/folders,128/international,128/logos,128/menus,128/mimetypes,128/status,128/misc,128/misc-animations,128/misc-mimetypes,128/misc-filesystems,160/actions,160/applications,160/animations,160/devices,160/emoticons,160/folders,160/international,160/logos,160/menus,160/mimetypes,160/status,160/misc,160/misc-animations,160/misc-mimetypes,160/misc-filesystems,176/actions,176/applications,176/animations,176/devices,176/emoticons,176/folders,176/international,176/logos,176/menus,176/mimetypes,176/status,176/misc,176/misc-animations,176/misc-mimetypes,176/misc-filesystems,208/actions,208/applications,208/animations,208/devices,208/emoticons,208/folders,208/international,208/logos,208/menus,208/mimetypes,208/status,208/misc,208/misc-animations,208/misc-mimetypes,208/misc-filesystems,224/actions,224/applications,224/animations,224/devices,224/emoticons,224/folders,224/international,224/logos,224/menus,224/mimetypes,224/status,224/misc,224/misc-animations,224/misc-mimetypes,224/misc-filesystems,256/actions,256/applications,256/animations,256/devices,256/emoticons,256/folders,256/international,256/logos,256/menus,256/mimetypes,256/status,256/misc,256/misc-animations,256/misc-mimetypes,256/misc-filesystems,
 

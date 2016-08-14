@@ -14,7 +14,7 @@
 * LXQt 0.10 theme
 * [SLiM](https://github.com/iwamatsu/slim) ([forks](https://github.com/iwamatsu/slim/network), [more forks](https://github.com/data-modul/slim/network)) theme
 * [QupZilla](hhttp://www.qupzilla.com/) theme
-* [A classic Icon theme](https://github.com/sixsixfive/Hedera-icons/blob/master/readme.md)
+* [A classic Icon theme](https://github.com/sixsixfive/Hedera-src/tree/master/icons)
 * GTK 3.20 theme
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
@@ -61,4 +61,4 @@ _Ubuntu based Distributions(Neon/Netrunner) can also use the deb, however since 
 
 ### FAQ
 
-* [Icon theme FAQ](https://github.com/sixsixfive/Hedera-icons/blob/master/faq.md)
+* [Icon theme FAQ](https://github.com/sixsixfive/Hedera-src/blob/master/icons/faq.md)

@@ -21,7 +21,9 @@ func_download() {
 	printf '\n==> Downloading the latest release from GitHub!\n'
     _downloaderhelpers="curl wget svn git"
     for _downloaderhelper in $_downloaderhelpers; do
-        type $_downloaderhelper &>/dev/null && _downloader=$_gui 
+        if type $_downloaderhelper >/dev/null 2>&1; then
+            _downloader=$_downloaderhelper
+        fi
     done
 	case $_downloaderhelper in
 		git)
