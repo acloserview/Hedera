@@ -26,15 +26,7 @@
 Just clone(git clone https://github.com/sixsixfive/Hedera.git) or [download](https://github.com/sixsixfive/Hedera/archive/master.zip) 
 the theme and move the wanted files inside of the CP_TO_DATADIRS folder to your SYSDATADIR(usually /usr/share or /usr/local/share) or your XDG_DATADIR (usually (~/.local/share).
 
-_Some themes like SLIM need to be placed into the sysprefix_
-
-##### Packages (as always use at your own risk)
-
-###### Devuan/Debian based Distributions
-
-* [DEB](https://github.com/sixsixfive/Hedera/raw/master/dist/hedera-theme_2.0-1_all.deb)
-
-_Ubuntu based Distributions(Neon/Netrunner) can also use the deb, however since Ubuntu is slightly out-of-date and GNOME-centric you probably will need the gtk3-nocsd from [here](http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu/pool/main/g/gtk3-nocsd/) and GTK3 >=3.20 from [here](https://launchpad.net/~gnome3-team/+archive/ubuntu/gnome3-staging)_
+_Some themes like SLIM need to be installed into the sysprefix_
 
 ### Suggested Settings to match the GTK theme
 
