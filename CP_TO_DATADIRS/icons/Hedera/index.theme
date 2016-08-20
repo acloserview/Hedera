@@ -23,9 +23,6 @@ Comment=Qt/KDE-fix
 Example=emblem-distributor
 Inherits=breeze,hicolor
 
-_basesizes="16 22 32 48"
-_scales48="96 144 192 240"
-
 ##KDE
 DesktopDefault=48
 DesktopSizes=16,22,24,32,48,96,144,192,240
@@ -39,7 +36,7 @@ PanelDefault=32
 PanelSizes=16,22,24,32,48,96,144,192,240
 DialogDefault=48
 DialogSizes=16,22,24,32,48,96,144,192,240
-KDE-Extensions=.png
+#KDE-Extensions=.png
 DisplayDepth=32
 FollowsColorScheme=false
 
