@@ -2,7 +2,7 @@
 ActiveTextColor=255,255,255,255
 InactiveTextColor=165,165,165,255
 ActiveTextShadowColor=255,0,255,255
-InactiveTextShadowColor=0,255,0,266
+InactiveTextShadowColor=0,255,0,255
 TextShadowOffsetX=0
 TextShadowOffsetY=1
 TitleAlignment=Center
