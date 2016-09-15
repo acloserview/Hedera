@@ -1,6 +1,6 @@
 #panel {
 	background:rgba(238,234,229,0.95);
-	border:1px solid #92908e;}
+	border:1px solid #474644;}
 
 #commandList {
 	border:1px solid palette(highlight);
@@ -13,8 +13,10 @@
 	border:none;
 	qproperty-icon: url(images/close.png);}
 
-#closeButton:hover,
-#closeButton:pressed{
+QToolButton#closeButton:hover,
+QToolButton#closeButton:pressed
+QToolButton#closeButton:hover:!pressed{
+	qproperty-iconSize:22px;
 	qproperty-icon: url(images/close-active.png);}
 
 #actionButton {

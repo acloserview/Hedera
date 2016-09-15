@@ -13,6 +13,7 @@
 
 ###### Other
 * LXQt 0.10 theme
+* Openbox 3 theme
 * [SLiM](https://github.com/iwamatsu/slim) ([forks](https://github.com/iwamatsu/slim/network), [more forks](https://github.com/data-modul/slim/network)) theme
 * [QupZilla](hhttp://www.qupzilla.com/) theme
 * [A classic Icon theme](https://github.com/sixsixfive/Hedera-src/tree/master/icons)
