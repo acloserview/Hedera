@@ -17,21 +17,36 @@ if [ ! -f ./icon-theme.cache ];then
 fi
 
 auto_distroicon() {
-	if [ $(cat /etc/os-release|grep "^ID=debian$") ];then
+	if [ -f /etc/debian_version ];then
 		if dpkg --get-selections|grep siduction &>/dev/null;then
 			_distributor="siduction"
 		else
 			_distributor="debian"
 		fi
-	elif [ $(cat /etc/os-release|grep "^ID=devuan$") ];then
+	fi
+	if [ -f /etc/devuan_version ];then
+		_distributor="devuan"
+	fi
+	if [ -f /etc/manjaro-release ];then
+		_distributor="manjaro"
+	fi
+#lsb
+	if [ $(cat /etc/lsb-release|grep "^DISTRIB_ID=Ubuntu$") ];then
+		_distributor="ubuntu"
+	elif [ $(cat /etc/lsb-release|grep "^DISTRIB_ID=LinuxMint$") ];then
+		#_distributor="linuxmint"
+	fi
+#systemd
+	if [ $(cat /etc/os-release|grep "^ID=devuan$") ];then
 		_distributor="devuan"
 	elif [ $(cat /etc/os-release|grep "^ID=opensuse$") ];then
 		_distributor="suse"
 	elif [ $(cat /etc/os-release|grep "^ID=chakra$") ];then
 		_distributor="chakra"
-	fi
-	if [ -f /etc/manjaro-release ];then
-		_distributor="manjaro"
+	elif [ $(cat /etc/os-release|grep "^ID=ubuntu$") ];then
+		_distributor="ubuntu"
+	elif [ $(cat /etc/os-release|grep "^ID=linuxmint$") ];then
+		_distributor="linuxmint"
 	fi
 	if [ -f "${_basedir}"/48/logos/distributor-$_distributor.png ];then
 		for _dir in $(echo $(find "${_basedir}" -maxdepth 1 -mindepth 1 -type d));do

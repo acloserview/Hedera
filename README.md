@@ -20,7 +20,7 @@
 * GTK 3.20 theme
 	* made for use with [GTK3-nocsd](https://github.com/PCMan/gtk3-nocsd)
 	* needs disabled overlay schrollbars (export GTK_OVERLAY_SCROLLING=0)
-	* keep in mind that the theme won't work in GNOME
+	* keep in mind that the theme won't work in desktops that ignore standards(eg: GNOME)
 
 ### How to Install?
 
