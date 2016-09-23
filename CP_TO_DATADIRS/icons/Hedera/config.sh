@@ -35,6 +35,7 @@ auto_distroicon() {
 		_distributor="ubuntu"
 	elif [ $(cat /etc/lsb-release|grep "^DISTRIB_ID=LinuxMint$") ];then
 		#_distributor="linuxmint"
+		_distributor="ubuntu"
 	fi
 #systemd
 	if [ $(cat /etc/os-release|grep "^ID=devuan$") ];then
