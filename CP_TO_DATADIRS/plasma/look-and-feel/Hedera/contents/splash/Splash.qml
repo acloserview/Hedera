@@ -2,10 +2,10 @@ import QtQuick 2.2
 import QtGraphicalEffects 1.0
 Image {
 	id: root
-	source: "../img/background.jpg"
-    horizontalAlignment: Image.AlignTop
-    verticalAlignment: Image.AlignLeft
-	fillMode: Image.Tile
+	source: "../img/background.png"
+	horizontalAlignment: Image.AlignHCenter
+	verticalAlignment: Image.AlignVCenter
+	fillMode: Image.PreserveAspectCrop
 	property int stage
 	onStageChanged: {
 		if (stage == 1) {
@@ -26,7 +26,7 @@ Image {
 			ani6.opacity = 0
         }
 		if (stage == 3) {
-            ani1.opacity = 1
+			ani1.opacity = 1
 			ani2.opacity = 1
 			ani3.opacity = 1
 			ani4.opacity = 0
@@ -34,7 +34,7 @@ Image {
 			ani6.opacity = 0
 		}
 		if (stage == 4) {
-            ani1.opacity = 1
+			ani1.opacity = 1
 			ani2.opacity = 1
 			ani3.opacity = 1
 			ani4.opacity = 1
@@ -42,7 +42,7 @@ Image {
 			ani6.opacity = 0
         }
 		if (stage == 5) {			
-            ani1.opacity = 1
+			ani1.opacity = 1
 			ani2.opacity = 1
 			ani3.opacity = 1
 			ani4.opacity = 1
@@ -50,7 +50,7 @@ Image {
 			ani6.opacity = 0
 		}
 		if (stage == 6) {
-            ani1.opacity = 1
+			ani1.opacity = 1
 			ani2.opacity = 1
 			ani3.opacity = 1
 			ani4.opacity = 1
@@ -76,8 +76,8 @@ Image {
 		radius: 8
 		samples: 17
 		color: "#80000000"
-        source: splash
-    }
+		source: splash
+}
 	Image {
 		id: ani1
 		height: 85
@@ -123,7 +123,7 @@ Image {
 		y: (root.height - height) / 2
 		source: "../img/progress3.png"
 		opacity: 0
-        Behavior on opacity {
+		Behavior on opacity {
 			NumberAnimation {
 				duration: 1500; 
 				easing {
@@ -141,7 +141,7 @@ Image {
 		y: (root.height - height) / 2
 		source: "../img/progress4.png"
 		opacity: 0
-        Behavior on opacity {
+		Behavior on opacity {
 			NumberAnimation {
 				duration: 1500; 
 				easing {
@@ -159,7 +159,7 @@ Image {
 		y: (root.height - height) / 2
 		source: "../img/progress5.png"
 		opacity: 0
-        Behavior on opacity {
+		Behavior on opacity {
 			NumberAnimation {
 				duration: 1500; 
 				easing {
@@ -177,7 +177,7 @@ Image {
 		y: (root.height - height) / 2
 		source: "../img/progress6.png"
 		opacity: 0
-        Behavior on opacity {
+		Behavior on opacity {
 			NumberAnimation {
 				duration: 1500; 
 				easing {

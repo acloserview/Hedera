@@ -3,7 +3,7 @@
 ## background
 # style of background: 'stretch', 'tile', 'center', 'color'
 background_style tile
-background_color #c0c0c0
+background_color #ece8e2
 
 # messages such as shutdown, reboot
 msg_x 50%
