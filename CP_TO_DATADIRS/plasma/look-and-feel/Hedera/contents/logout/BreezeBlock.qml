@@ -38,10 +38,10 @@ PlasmaCore.ColorScope {
 		width: 400
 		radius: 5
 		smooth: true
-		color: "#90000000"
+		color: "#353232"
 		x: (root.width - width) / 2
 		y: (root.height - height) / 2
-		opacity: 1
+		opacity: 1.0
 	}
 	DropShadow {
 		anchors.fill: splash
@@ -49,8 +49,9 @@ PlasmaCore.ColorScope {
 		verticalOffset: 6
 		radius: 45
 		samples: 17
-		color: "#70000000"
-        source: splash
+		color: "#80000000"
+		source: splash
+		opacity: 0.8
     }
     Loader {
         id: mainView
