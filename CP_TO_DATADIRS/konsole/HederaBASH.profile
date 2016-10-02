@@ -1,7 +1,7 @@
 [Appearance]
 AntiAliasFonts=true
 ColorScheme=Hedera
-Font=Noto Mono,12,-1,5,50,0,0,0,0,0
+Font=Monospace,12,-1,5,50,0,0,0,0,0
 
 [Cursor Options]
 CursorShape=0
